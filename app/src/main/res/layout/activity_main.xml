@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/memeImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@id/shareButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/shareButtonColor"
+        android:padding="20dp"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/nextButtonColor"
+        android:padding="20dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/textColor"
+        android:text="@string/danknigga"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/memeImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068" />
+</androidx.constraintlayout.widget.ConstraintLayout>
